@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_match/board_selection.dart';
 
 void main() => runApp(MyApp());
 
@@ -31,9 +32,6 @@ class _MyHomePageState extends State<MyHomePage> {
         appBar: AppBar(
           title: Text(widget.title),
         ),
-        body: Center(
-            child: Column(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
-          // gameTable();
-        ])));
+        body: Center(child: Column(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[BoardSelection()])));
   }
 }
