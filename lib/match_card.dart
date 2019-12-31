@@ -20,8 +20,8 @@ class _MatchCardState extends State<MatchCard> {
       child: Container(
         height: widget.cardSize,
         width: widget.cardSize,
-        padding: EdgeInsets.all(2.0),
-        margin: EdgeInsets.all(2.0),
+//        padding: EdgeInsets.all(2.0),
+        margin: EdgeInsets.only(top: 1.0, left: 1.0),
         child: Center(
             child: Text(
           _revealed == true ? widget.text : '',

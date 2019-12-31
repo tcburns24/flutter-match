@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_match/game_table.dart';
+
+import 'game_table.dart';
 
 class BoardSelection extends StatefulWidget {
   BoardSelection({Key key}) : super(key: key);
@@ -24,15 +25,18 @@ class _BoardSelectionState extends State<BoardSelection> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         Container(
+            margin: EdgeInsets.only(bottom: 3.0),
             child: DropdownButton<int>(
-          items: _sizes.map((int value) {
-            return DropdownMenuItem<int>(value: value, child: Text('${value.toString()} x ${value.toString()}'));
-          }).toList(),
-          value: _currentSize,
-          onChanged: (int value) {
-            _onDropdownChange(value);
-          },
-        )),
+              items: _sizes.map((int value) {
+                return DropdownMenuItem<int>(value: value, child: Text('${value.toString()} x ${value.toString()}'));
+              }).toList(),
+              value: _currentSize,
+              onChanged: (int value) {
+                _onDropdownChange(value);
+              },
+              icon: Icon(Icons.arrow_drop_down, size: 28, color: Colors.indigo),
+              hint: Text('Board Sizes'),
+            )),
         GameTable(boardSize: _currentSize)
       ],
     );
