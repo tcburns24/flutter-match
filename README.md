@@ -1,4 +1,4 @@
-# flutter_match
+# Flutter Match-O-Rama
 
 A new Flutter project.
 
